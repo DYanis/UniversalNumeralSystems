@@ -9,24 +9,22 @@ class Program
     {
         List<string> keys = new List<string>();
         // Add here numeral system keys.
-        keys.Add("xxx");
-        keys.Add("XXX");
-        keys.Add("yyy");
-        keys.Add("YYY");
-        keys.Add("zzz");
         keys.Add("ZZZ");
-        keys.Add("JJJ");
-        keys.Add("III");
-        keys.Add("KKK");
-
-
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        keys.Add("ZZZ");
+        
         string number = Console.ReadLine();
         ulong res = ConvertorFromBaseToDecimal(keys, number);
         Console.WriteLine(res);
     }
-
     static ulong ConvertorFromBaseToDecimal(List<string> keys, string key)
-    {        
+    {
         List<ulong> numL = new List<ulong>();
         string n = "";
         for (int i = 0; i < key.Length; i++)
@@ -38,13 +36,22 @@ class Program
                 n = "";
             }
         }
-
         ulong[] decNumbers = numL.ToArray();
         Array.Reverse(decNumbers);
         ulong result = 0;
         for (int i = 0; i < numL.Count; i++)
         {
-            result += (ulong)(decNumbers[i] * Math.Pow(keys.Count, i));
+            result += (decNumbers[i] * Pow((ulong)keys.Count, (ulong)i));
+        }
+        return result;
+    }
+
+    static ulong Pow(ulong number, ulong pow)
+    {
+        ulong result = 1;
+        for (ulong i = 0; i < pow; i++)
+        {
+            result *= number;
         }
         return result;
     }
