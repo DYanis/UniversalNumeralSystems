@@ -7,44 +7,43 @@ internal class Start
 {
     internal static void Main()
     {
+        // Add numeral system keys.
         List<string> keys = new List<string>();
+        keys.Add("KKK0");
+        keys.Add("KKK1");
+        keys.Add("KKK2");
+        keys.Add("KKK3");
+        keys.Add("KKK4");
+        keys.Add("KKK5");
+        keys.Add("KKK6");
+        keys.Add("KKK7");
+        keys.Add("KKK8");
 
-        // Add here numeral system keys.
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-        keys.Add("ZZZ");
-
-        string number = Console.ReadLine();
-        ulong convertedNumber = ConvertorFromBaseToDecimal(keys, number);
+        string baseNumber = Console.ReadLine();
+        ulong convertedNumber = ConvertorFromBaseToDecimal(keys, baseNumber);
         Console.WriteLine(convertedNumber);
     }
 
-    internal static ulong ConvertorFromBaseToDecimal(List<string> keys, string key)
+    internal static ulong ConvertorFromBaseToDecimal(List<string> keys, string baseNumber)
     {
         List<ulong> numL = new List<ulong>();
-        string n = string.Empty;
-        for (int i = 0; i < key.Length; i++)
+        string currentKey = string.Empty;
+        for (int i = 0; i < baseNumber.Length; i++)
         {
-            n += key[i].ToString();
-            if (keys.IndexOf(n) > -1)
+            currentKey += baseNumber[i].ToString();
+            if (keys.IndexOf(currentKey) > -1)
             {
-                numL.Add((ulong)keys.IndexOf(n));
-                n = string.Empty;
+                numL.Add((ulong)keys.IndexOf(currentKey));
+                currentKey = string.Empty;
             }
         }
 
-        ulong[] decNumbers = numL.ToArray();
-        Array.Reverse(decNumbers);
+        ulong[] decimalNumbers = numL.ToArray();
+        Array.Reverse(decimalNumbers);
         ulong result = 0;
         for (int i = 0; i < numL.Count; i++)
         {
-            result += (decNumbers[i] * Pow((ulong)keys.Count, (ulong)i));
+            result += (decimalNumbers[i] * Pow((ulong)keys.Count, (ulong)i));
         }
 
         return result;

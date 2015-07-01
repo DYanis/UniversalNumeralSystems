@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ConvertorFromDecimalBaseNumeralSystem")]
+[assembly: AssemblyTitle("ConvertorFromDecimalToBaseNumeralSystem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConvertorFromDecimalBaseNumeralSystem")]
+[assembly: AssemblyProduct("ConvertorFromDecimalToBaseNumeralSystem")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8ce2c9f5-5a4c-49e0-b49f-c732322e8d21")]
+[assembly: Guid("462388be-b933-431f-ae2e-7fa207556922")]
 
 // Version information for an assembly consists of the following four values:
 //
