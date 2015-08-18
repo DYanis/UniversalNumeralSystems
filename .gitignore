@@ -5,6 +5,10 @@
 *.suo
 *.user
 *.sln.docstates
+_ReSharper.*
+bin
+obj
+packages
 
 # Build results
 [Dd]ebug/
