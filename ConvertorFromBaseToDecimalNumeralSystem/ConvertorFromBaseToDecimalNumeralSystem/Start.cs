@@ -9,15 +9,15 @@ internal class Start
     {
         // Add numeral system keys.
         List<string> keys = new List<string>();
-        keys.Add("KKK0"); // 1
-        keys.Add("KKK1"); // 2
-        keys.Add("KKK2"); // 3
-        keys.Add("KKK3"); // 4
-        keys.Add("KKK4"); // 5
-        keys.Add("KKK5"); // 6
-        keys.Add("KKK6"); // 7
-        keys.Add("KKK7"); // 8
-        keys.Add("KKK8"); // 9
+        keys.Add("KKK0"); // 0
+        keys.Add("KKK1"); // 1
+        keys.Add("KKK2"); // 2
+        keys.Add("KKK3"); // 3
+        keys.Add("KKK4"); // 4
+        keys.Add("KKK5"); // 5
+        keys.Add("KKK6"); // 6
+        keys.Add("KKK7"); // 7
+        keys.Add("KKK8"); // 8
 
         string baseNumber = Console.ReadLine();
         ulong convertedNumber = ConvertFromBaseToDecimal(keys, baseNumber);
