@@ -8,14 +8,14 @@ internal class Start
     {
         // Add numeral system keys.
         List<string> keys = new List<string>();
-        keys.Add("ZZZ0"); // 1
-        keys.Add("ZZZ1"); // 2
-        keys.Add("ZZZ2"); // 3
-        keys.Add("ZZZ3"); // 4
-        keys.Add("ZZZ4"); // 5
-        keys.Add("ZZZ5"); // 6
-        keys.Add("ZZZ6"); // 7
-        keys.Add("ZZZ7"); // 8
+        keys.Add("ZZZ0"); // 0
+        keys.Add("ZZZ1"); // 1
+        keys.Add("ZZZ2"); // 2
+        keys.Add("ZZZ3"); // 3
+        keys.Add("ZZZ4"); // 4
+        keys.Add("ZZZ5"); // 5
+        keys.Add("ZZZ6"); // 6
+        keys.Add("ZZZ7"); // 7
 
         ulong decimalNumber = ulong.Parse(Console.ReadLine());
         string convertedNumber = ConvertFromDecimalToBase(keys, decimalNumber);
