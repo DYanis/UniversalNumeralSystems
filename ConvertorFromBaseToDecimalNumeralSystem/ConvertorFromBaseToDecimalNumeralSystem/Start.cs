@@ -9,22 +9,22 @@ internal class Start
     {
         // Add numeral system keys.
         List<string> keys = new List<string>();
-        keys.Add("KKK0");
-        keys.Add("KKK1");
-        keys.Add("KKK2");
-        keys.Add("KKK3");
-        keys.Add("KKK4");
-        keys.Add("KKK5");
-        keys.Add("KKK6");
-        keys.Add("KKK7");
-        keys.Add("KKK8");
+        keys.Add("KKK0"); // 1
+        keys.Add("KKK1"); // 2
+        keys.Add("KKK2"); // 3
+        keys.Add("KKK3"); // 4
+        keys.Add("KKK4"); // 5
+        keys.Add("KKK5"); // 6
+        keys.Add("KKK6"); // 7
+        keys.Add("KKK7"); // 8
+        keys.Add("KKK8"); // 9
 
         string baseNumber = Console.ReadLine();
-        ulong convertedNumber = ConvertorFromBaseToDecimal(keys, baseNumber);
+        ulong convertedNumber = ConvertFromBaseToDecimal(keys, baseNumber);
         Console.WriteLine(convertedNumber);
     }
 
-    internal static ulong ConvertorFromBaseToDecimal(List<string> keys, string baseNumber)
+    internal static ulong ConvertFromBaseToDecimal(List<string> keys, string baseNumber)
     {
         List<ulong> numL = new List<ulong>();
         string currentKey = string.Empty;
