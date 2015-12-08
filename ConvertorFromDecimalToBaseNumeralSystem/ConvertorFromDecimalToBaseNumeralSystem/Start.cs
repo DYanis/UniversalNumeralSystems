@@ -18,11 +18,11 @@ internal class Start
         keys.Add("ZZZ7"); // 8
 
         ulong decimalNumber = ulong.Parse(Console.ReadLine());
-        string convertedNumber = ConvertorFromDecimalToBase(keys, decimalNumber);
+        string convertedNumber = ConvertFromDecimalToBase(keys, decimalNumber);
         Console.WriteLine(convertedNumber);
     }
 
-   internal static string ConvertorFromDecimalToBase(List<string> keys, ulong decimalNumber)
+   internal static string ConvertFromDecimalToBase(List<string> keys, ulong decimalNumber)
     {
         if (decimalNumber == 0)
         {
